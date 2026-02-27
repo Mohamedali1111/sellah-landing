@@ -1,0 +1,16 @@
+{
+  "Common": {
+    "appName": "سِلّة",
+    "tagline": "مكان واحد لكل البراندات المحلية في مصر.",
+    "languageEnglish": "English",
+    "languageArabic": "العربية"
+  },
+  "HomePage": {
+    "heroTitle": "سوق البراندات المحلية في مصر.",
+    "heroSubtitle": "سِلّة تحوّل فوضى الرسائل إلى تجربة شراء منظمة وآمنة للمشتري والبائع في مصر.",
+    "primaryCta": "انضم لقائمة الانتظار",
+    "secondaryCta": "لأصحاب المتاجر",
+    "problemTitle": "البيع في الرسائل مشكلة.",
+    "solutionTitle": "سِلّة بتخليها منظمة."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "Common": {
+    "appName": "Sellah",
+    "tagline": "One marketplace for Egypt’s local brands.",
+    "languageEnglish": "English",
+    "languageArabic": "العربية"
+  },
+  "HomePage": {
+    "heroTitle": "The marketplace for Egypt’s local brands.",
+    "heroSubtitle": "Sellah turns DM chaos into a clean, secure checkout experience for buyers and sellers in Egypt.",
+    "primaryCta": "Get early access",
+    "secondaryCta": "For sellers",
+    "problemTitle": "Selling in DMs is broken.",
+    "solutionTitle": "Sellah makes it organized."
+  }
+}
