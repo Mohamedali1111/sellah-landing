@@ -1,9 +1,11 @@
 "use client";
 
 import { useTheme } from "@/lib/theme/ThemeProvider";
+import { useTranslations } from "next-intl";
 
 export function ThemeToggle() {
   const { theme, toggleTheme } = useTheme();
+  const t = useTranslations("Common");
 
   const isDark = theme === "dark";
 
@@ -11,7 +13,9 @@ export function ThemeToggle() {
     <button
       type="button"
       onClick={toggleTheme}
-      aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+      aria-label={
+        isDark ? t("themeToggleLightLabel") : t("themeToggleDarkLabel")
+      }
       className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-zinc-800/10 bg-zinc-100/70 text-xs text-zinc-700 shadow-sm transition hover:border-red-500/60 hover:text-red-600 dark:border-zinc-700/60 dark:bg-zinc-900/70 dark:text-zinc-200"
     >
       <span aria-hidden="true">

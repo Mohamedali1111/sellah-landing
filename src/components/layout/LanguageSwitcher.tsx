@@ -25,7 +25,7 @@ export function LanguageSwitcher() {
   return (
     <div
       className="inline-flex items-center gap-px rounded-full border border-zinc-800/10 bg-zinc-100/60 p-0.5 text-xs font-medium text-zinc-700 shadow-sm dark:border-zinc-700/60 dark:bg-zinc-900/60 dark:text-zinc-200"
-      aria-label="Language switcher"
+      aria-label={t("languageSwitcherLabel")}
     >
       <button
         type="button"

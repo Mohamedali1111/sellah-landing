@@ -12,7 +12,7 @@ import {
 type Theme = "light" | "dark";
 
 type ThemeContextValue = {
-  theme: Theme | null;
+  theme: Theme;
   setTheme: (theme: Theme) => void;
   toggleTheme: () => void;
 };
@@ -26,7 +26,7 @@ function applyTheme(theme: Theme) {
 }
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setThemeState] = useState<Theme | null>(null);
+  const [theme, setThemeState] = useState<Theme>("dark");
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -55,7 +55,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const toggleTheme = useCallback(() => {
-    setTheme((prevTheme => (prevTheme === "dark" ? "light" : "dark")) as Theme);
+    setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
   }, [setTheme]);
 
   return (
