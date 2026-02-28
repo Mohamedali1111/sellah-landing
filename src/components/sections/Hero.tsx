@@ -52,7 +52,7 @@ export function Hero() {
             {t("secondaryCta")}
           </motion.a>
         </div>
-        <div className="mt-5 flex flex-wrap items-center justify-start gap-3 text-[11px] text-[var(--muted-foreground)]">
+        <div className="mt-5 flex flex-wrap items-center justify-center gap-3 text-[11px] text-[var(--muted-foreground)] lg:justify-start">
           <span className="chip">
             <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-red-400" />
             {t("heroSecurePill")}

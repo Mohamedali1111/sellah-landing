@@ -9,7 +9,7 @@ import { CTASection } from "@/components/sections/CTA";
 
 export default function Home() {
   return (
-    <main className="relative flex min-h-screen flex-col items-center overflow-x-clip pb-20 pt-6 sm:pt-8">
+    <main className="main-content relative flex min-h-screen w-full max-w-full flex-col items-center overflow-x-hidden pt-6 sm:pt-8">
       <Hero />
       <ProblemSolution />
       <ForBuyers />

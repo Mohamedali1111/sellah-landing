@@ -40,7 +40,7 @@ export function ForSellers() {
 
   return (
     <section id="sellers" className="section-shell relative scroll-mt-24 pb-16 sm:pb-20">
-      <div className="grid gap-8 lg:grid-cols-[1.1fr_minmax(0,1.2fr)]">
+      <div className="grid gap-6 sm:gap-8 lg:grid-cols-[1.1fr_minmax(0,1.2fr)]">
         <div className="text-start">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-red-400">
             {t("sellersSectionEyebrow")}
@@ -64,7 +64,7 @@ export function ForSellers() {
             {items.map((item, index) => (
               <motion.div
                 key={item.title}
-                className="flex flex-col justify-between rounded-2xl border border-[var(--border)] bg-[color:var(--surface)] p-4 text-start shadow-[0_10px_36px_rgba(0,0,0,0.18)]"
+                className="flex flex-col justify-between rounded-2xl border border-[var(--border)] bg-[color:var(--surface)] p-3 text-start shadow-[0_10px_36px_rgba(0,0,0,0.18)] sm:p-4"
                 variants={cardVariants}
                 initial="hidden"
                 whileInView="visible"
@@ -87,7 +87,7 @@ export function ForSellers() {
             <span className="text-start">
               {t("sellersFooterLine")}
             </span>
-            <a href="#cta" className="btn-primary px-5 py-1.5 text-xs">
+            <a href="#cta" className="btn-primary min-h-[44px] min-w-[44px] touch-manipulation px-5 py-2.5 text-xs sm:py-1.5">
               {t("sellersCta")}
             </a>
           </div>

@@ -148,8 +148,36 @@ textarea:focus-visible {
 }
 
 @layer components {
+  .header-spacer {
+    padding-top: calc(4rem + env(safe-area-inset-top, 0px));
+  }
+  @media (min-width: 640px) {
+    .header-spacer {
+      padding-top: calc(4.5rem + env(safe-area-inset-top, 0px));
+    }
+  }
+
+  .main-content {
+    padding-bottom: max(5rem, calc(5rem + env(safe-area-inset-bottom, 0px)));
+  }
+
+  .header-content,
+  .footer-content {
+    padding-left: max(1rem, env(safe-area-inset-left, 0px));
+    padding-right: max(1rem, env(safe-area-inset-right, 0px));
+  }
+  @media (min-width: 640px) {
+    .header-content,
+    .footer-content {
+      padding-left: max(1.5rem, env(safe-area-inset-left, 0px));
+      padding-right: max(1.5rem, env(safe-area-inset-right, 0px));
+    }
+  }
+
   .section-shell {
     @apply mx-auto w-full max-w-6xl px-4 sm:px-6;
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
   }
 
   .glass-card {

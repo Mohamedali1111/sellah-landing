@@ -32,7 +32,7 @@ export function HowItWorks() {
 
   return (
     <section id="how" className="section-shell relative scroll-mt-24 pb-16 sm:pb-20">
-      <div className="flex flex-col gap-8 lg:grid lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1.2fr)] lg:items-start">
+      <div className="flex flex-col gap-6 sm:gap-8 lg:grid lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1.2fr)] lg:items-start">
         <div className="text-start">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--muted-foreground)]">
             {t("howEyebrow")}
@@ -45,7 +45,7 @@ export function HowItWorks() {
           </p>
 
           <div
-            className={`mt-5 inline-flex rounded-full border border-[var(--border)] bg-[var(--surface-soft)] p-0.5 text-xs font-medium ${
+            className={`mt-5 inline-flex rounded-full border border-[var(--border)] bg-[var(--surface-soft)] p-0.5 text-xs font-medium touch-manipulation ${
               isArabic ? "flex-row-reverse" : ""
             }`}
           >
@@ -55,7 +55,7 @@ export function HowItWorks() {
                 setMode("buyer");
                 setActiveIndex(0);
               }}
-              className={`rounded-full px-4 py-1.5 transition ${
+              className={`min-h-[44px] rounded-full px-4 py-2.5 transition sm:py-1.5 ${
                 mode === "buyer"
                   ? "bg-[var(--surface)] text-[var(--foreground)]"
                   : "text-[var(--muted-foreground)] hover:text-[var(--foreground)]"
@@ -69,7 +69,7 @@ export function HowItWorks() {
                 setMode("seller");
                 setActiveIndex(0);
               }}
-              className={`rounded-full px-4 py-1.5 transition ${
+              className={`min-h-[44px] rounded-full px-4 py-2.5 transition sm:py-1.5 ${
                 mode === "seller"
                   ? "bg-[var(--surface)] text-[var(--foreground)]"
                   : "text-[var(--muted-foreground)] hover:text-[var(--foreground)]"
@@ -79,8 +79,8 @@ export function HowItWorks() {
             </button>
           </div>
 
-          <div className="mt-6 flex">
-            <div className="relative me-4 flex flex-col items-center">
+          <div className="mt-6 flex gap-3 sm:gap-4">
+            <div className="relative me-2 flex flex-col items-center sm:me-4">
               <div className="absolute bottom-2 top-2 w-px bg-[var(--border)]" />
               {steps.map((step, index) => {
                 const isActive = index === activeIndex;
@@ -89,7 +89,7 @@ export function HowItWorks() {
                     key={step.key}
                     type="button"
                     onClick={() => setActiveIndex(index)}
-                    className={`relative z-10 mb-4 flex h-7 w-7 items-center justify-center rounded-full border text-xs transition ${
+                    className={`relative z-10 mb-4 flex h-10 w-10 min-h-[44px] min-w-[44px] items-center justify-center rounded-full border text-xs transition touch-manipulation sm:h-7 sm:w-7 sm:min-h-0 sm:min-w-0 ${
                       isActive
                         ? "border-red-500 bg-red-500 text-white"
                         : "border-[var(--border)] bg-[var(--surface)] text-[var(--muted-foreground)] hover:border-red-400/70 hover:text-red-500"
@@ -100,7 +100,7 @@ export function HowItWorks() {
                 );
               })}
             </div>
-            <div className="w-full space-y-3">
+            <div className="min-w-0 flex-1 space-y-2 sm:space-y-3">
               {steps.map((step, index) => {
                 const isActive = index === activeIndex;
                 return (
@@ -108,7 +108,7 @@ export function HowItWorks() {
                     key={step.key}
                     type="button"
                     onClick={() => setActiveIndex(index)}
-                    className={`w-full rounded-2xl px-3 py-2 text-start text-sm transition ${
+                    className={`w-full min-h-[44px] rounded-2xl px-3 py-3 text-start text-sm transition touch-manipulation sm:py-2 ${
                       isActive
                         ? "bg-red-500/15 text-red-500 ring-1 ring-red-500/45"
                         : "bg-transparent text-[var(--muted-foreground)] hover:bg-[var(--surface)] hover:text-[var(--foreground)]"
@@ -126,10 +126,10 @@ export function HowItWorks() {
           key={`${mode}-${activeStep.key}`}
           initial={{ opacity: 0, y: 20, scale: 0.97 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 0.5, ease: [0.19, 1, 0.22, 1] }}
+          transition={{ duration: 0.5, ease: [0.19, 1, 0.22, 1] as const }}
           className="relative mt-2 flex-1 lg:mt-0"
         >
-          <div className="relative overflow-hidden rounded-3xl border border-[var(--border)] bg-[color:var(--surface)] p-6 backdrop-blur">
+          <div className="relative overflow-hidden rounded-3xl border border-[var(--border)] bg-[color:var(--surface)] p-4 backdrop-blur sm:p-6">
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_0%_0%,rgba(248,113,113,0.24),transparent_55%),radial-gradient(circle_at_100%_100%,rgba(239,68,68,0.18),transparent_55%)] opacity-80" />
             <div className="relative z-10 space-y-3 text-start">
               <p className="text-xs font-medium uppercase tracking-[0.22em] text-[var(--muted-foreground)]">

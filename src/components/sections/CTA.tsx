@@ -38,7 +38,7 @@ export function CTASection() {
   return (
     <section id="cta" className="section-shell relative scroll-mt-24 pb-20 sm:pb-24">
       <motion.div
-        className="relative overflow-hidden rounded-3xl border border-red-500/30 px-5 py-9 backdrop-blur-sm sm:px-8 sm:py-10"
+        className="relative overflow-hidden rounded-3xl border border-red-500/30 px-4 py-8 backdrop-blur-sm sm:px-8 sm:py-10"
         style={{ background: "var(--hero-gradient)" }}
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -62,7 +62,7 @@ export function CTASection() {
 
           <form
             onSubmit={onSubmit}
-            className="flex flex-col gap-3 rounded-2xl border border-[var(--border)] bg-[color:var(--surface)] p-5 text-start"
+            className="flex w-full flex-col gap-3 rounded-2xl border border-[var(--border)] bg-[color:var(--surface)] p-4 text-start sm:p-5"
             noValidate
           >
             <div className="flex flex-col gap-1.5">

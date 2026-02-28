@@ -10,7 +10,7 @@ export function Footer() {
 
   return (
     <footer className="mt-16 border-t border-[var(--border)] bg-[color:var(--surface)]/85 backdrop-blur">
-      <div className="mx-auto grid max-w-6xl gap-6 px-4 py-8 text-[0.82rem] sm:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] sm:items-center sm:px-6">
+      <div className="footer-content mx-auto grid max-w-6xl gap-6 py-8 text-[0.82rem] sm:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] sm:items-center">
         <div className="space-y-3 text-start">
           <p className="text-[var(--muted-foreground)]">
             © {new Date().getFullYear()} Sellah. {t("tagline")}

@@ -16,7 +16,7 @@ export function ThemeToggle() {
       aria-label={
         isDark ? t("themeToggleLightLabel") : t("themeToggleDarkLabel")
       }
-      className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface-soft)] text-xs text-[var(--foreground)] shadow-sm hover:border-red-500/60 hover:text-red-500"
+      className="inline-flex h-11 w-11 min-h-[44px] min-w-[44px] items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface-soft)] text-xs text-[var(--foreground)] shadow-sm touch-manipulation hover:border-red-500/60 hover:text-red-500 md:h-9 md:w-9"
     >
       <span aria-hidden="true">
         {isDark ? (

@@ -47,7 +47,7 @@ export function ForBuyers() {
   return (
     <section id="buyers" className="section-shell relative scroll-mt-24 pb-16 sm:pb-20">
       <div
-        className={`flex flex-col gap-10 lg:flex-row ${
+        className={`flex flex-col gap-8 sm:gap-10 lg:flex-row ${
           isArabic ? "lg:flex-row-reverse" : ""
         }`}
       >
@@ -78,7 +78,7 @@ export function ForBuyers() {
             {steps.map((step, index) => (
               <motion.div
                 key={step.title}
-                className="relative flex items-center gap-4 rounded-2xl bg-[color:var(--surface)] p-4 ring-1 ring-[var(--border)] backdrop-blur"
+                className="relative flex items-center gap-3 rounded-2xl bg-[color:var(--surface)] p-3 ring-1 ring-[var(--border)] backdrop-blur sm:gap-4 sm:p-4"
                 variants={itemVariants}
                 initial="hidden"
                 whileInView="visible"

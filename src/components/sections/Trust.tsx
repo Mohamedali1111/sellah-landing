@@ -7,7 +7,7 @@ export function Trust() {
 
   return (
     <section className="section-shell relative pb-16 sm:pb-20">
-      <div className="flex flex-col gap-8 border-y border-[var(--border)] py-10">
+      <div className="flex flex-col gap-6 border-y border-[var(--border)] py-8 sm:gap-8 sm:py-10">
         <div className="text-start">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-red-500">
             {t("trustEyebrow")}
@@ -20,9 +20,9 @@ export function Trust() {
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] md:items-center">
-          <div className="grid gap-4 sm:grid-cols-3">
-            <div className="rounded-2xl bg-[color:var(--surface)] p-4 text-start ring-1 ring-red-500/35">
+        <div className="grid gap-5 sm:gap-6 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] md:items-center">
+          <div className="grid gap-3 sm:gap-4 sm:grid-cols-3">
+            <div className="rounded-2xl bg-[color:var(--surface)] p-3 text-start ring-1 ring-red-500/35 sm:p-4">
               <p className="text-xs font-medium uppercase tracking-[0.18em] text-red-500">
                 {t("trustMetricRating")}
               </p>
@@ -30,7 +30,7 @@ export function Trust() {
                 {t("trustMetricRatingBody")}
               </p>
             </div>
-            <div className="rounded-2xl bg-[color:var(--surface)] p-4 text-start ring-1 ring-[var(--border)]">
+            <div className="rounded-2xl bg-[color:var(--surface)] p-3 text-start ring-1 ring-[var(--border)] sm:p-4">
               <p className="text-xs font-medium uppercase tracking-[0.18em] text-[var(--foreground)]">
                 {t("trustMetricVerified")}
               </p>
@@ -38,7 +38,7 @@ export function Trust() {
                 {t("trustMetricVerifiedBody")}
               </p>
             </div>
-            <div className="rounded-2xl bg-[color:var(--surface)] p-4 text-start ring-1 ring-red-500/35">
+            <div className="rounded-2xl bg-[color:var(--surface)] p-3 text-start ring-1 ring-red-500/35 sm:p-4">
               <p className="text-xs font-medium uppercase tracking-[0.18em] text-red-500">
                 {t("trustMetricProtection")}
               </p>

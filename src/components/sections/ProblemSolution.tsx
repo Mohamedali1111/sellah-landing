@@ -20,7 +20,7 @@ export function ProblemSolution() {
   return (
     <section className="section-shell relative mt-4 pb-16 sm:pb-20">
       <motion.div
-        className="relative overflow-hidden rounded-3xl border border-[var(--border)] px-5 py-8 shadow-[0_24px_80px_rgba(0,0,0,0.2)] sm:px-8 sm:py-10"
+        className="relative overflow-hidden rounded-3xl border border-[var(--border)] px-4 py-6 shadow-[0_24px_80px_rgba(0,0,0,0.2)] sm:px-8 sm:py-10"
         style={{ background: "var(--hero-gradient)" }}
         variants={containerVariants}
         initial="hidden"
@@ -31,7 +31,7 @@ export function ProblemSolution() {
           <div className="h-full w-full bg-[radial-gradient(circle_at_0_0,#ef4444_0,transparent_45%),radial-gradient(circle_at_100%_100%,rgba(239,68,68,0.35)_0,transparent_40%)]" />
         </div>
 
-        <div className="relative z-10 flex flex-col gap-8 lg:flex-row lg:items-stretch lg:gap-10">
+        <div className="relative z-10 flex flex-col gap-6 sm:gap-8 lg:flex-row lg:items-stretch lg:gap-10">
           {/* Left: DM chaos */}
           <div className="flex-1 space-y-4">
             <div className="text-start text-xs font-semibold uppercase tracking-[0.22em] text-[var(--muted-foreground)]">

@@ -8,7 +8,7 @@ export function AppDownload() {
 
   return (
     <section id="download" className="section-shell relative scroll-mt-24 pb-16 sm:pb-20">
-      <div className="grid gap-10 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:items-center">
+      <div className="grid gap-8 sm:gap-10 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:items-center">
         <div className="text-start">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--muted-foreground)]">
             {t("downloadEyebrow")}
@@ -23,11 +23,11 @@ export function AppDownload() {
           <div className="mt-5 flex flex-wrap items-center gap-3 text-[0.8rem] text-[var(--muted-foreground)]">
             <span>{t("downloadComingSoon")}</span>
             <div className="flex flex-wrap gap-2">
-              <button className="btn-secondary gap-2 px-4 py-1.5 text-xs">
+              <button type="button" className="btn-secondary min-h-[44px] touch-manipulation gap-2 px-4 py-2.5 text-xs sm:py-1.5">
                 <span className="text-sm"></span>
                 <span>{t("downloadAppStore")}</span>
               </button>
-              <button className="btn-secondary gap-2 px-4 py-1.5 text-xs">
+              <button type="button" className="btn-secondary min-h-[44px] touch-manipulation gap-2 px-4 py-2.5 text-xs sm:py-1.5">
                 <span className="h-2 w-2 shrink-0 rounded-sm bg-red-500" />
                 <span>{t("downloadPlayStore")}</span>
               </button>
