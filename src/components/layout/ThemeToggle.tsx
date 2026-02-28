@@ -26,10 +26,10 @@ export function ThemeToggle() {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <circle cx="12" cy="12" r="4" className="fill-yellow-500" />
+            <circle cx="12" cy="12" r="4" className="fill-red-400" />
             <path
               d="M12 3V5M12 19V21M4.22 4.22L5.64 5.64M18.36 18.36L19.78 19.78M3 12H5M19 12H21M4.22 19.78L5.64 18.36M18.36 5.64L19.78 4.22"
-              className="stroke-yellow-500"
+              className="stroke-red-400"
               strokeWidth="1.4"
               strokeLinecap="round"
             />

@@ -45,10 +45,10 @@ export function CTASection() {
         viewport={{ once: true, amount: 0.4 }}
         transition={{ duration: 0.55, ease: [0.19, 1, 0.22, 1] }}
       >
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_0%_0%,rgba(248,113,113,0.28),transparent_55%),radial-gradient(circle_at_100%_100%,rgba(37,99,235,0.16),transparent_60%)] opacity-80" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_0%_0%,rgba(248,113,113,0.28),transparent_55%),radial-gradient(circle_at_100%_100%,rgba(239,68,68,0.2),transparent_60%)] opacity-80" />
 
         <div className="relative z-10 grid gap-8 md:grid-cols-[minmax(0,1.3fr)_minmax(0,1.1fr)] md:items-center">
-          <div className={isArabic ? "text-right" : "text-left"}>
+          <div className="text-start">
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-red-400">
               {t("ctaEyebrow")}
             </p>
@@ -62,9 +62,7 @@ export function CTASection() {
 
           <form
             onSubmit={onSubmit}
-            className={`space-y-4 rounded-2xl border border-[var(--border)] bg-[color:var(--surface)] p-5 ${
-              isArabic ? "text-right" : "text-left"
-            }`}
+            className="space-y-4 rounded-2xl border border-[var(--border)] bg-[color:var(--surface)] p-5 text-start"
             noValidate
           >
             <div className="flex flex-col gap-2">
@@ -124,7 +122,7 @@ export function CTASection() {
               </p>
             )}
             {submitted && !error && (
-              <p className="rounded-lg border border-emerald-500/40 bg-emerald-500/10 px-3 py-2 text-xs text-emerald-500">
+              <p className="rounded-lg border border-red-500/40 bg-red-500/10 px-3 py-2 text-xs text-red-500">
                 {t("ctaSuccessMessage")}
               </p>
             )}

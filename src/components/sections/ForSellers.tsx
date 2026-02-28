@@ -43,7 +43,7 @@ export function ForSellers() {
   return (
     <section id="sellers" className="section-shell relative scroll-mt-24 pb-16 sm:pb-20">
       <div className="grid gap-8 lg:grid-cols-[1.1fr_minmax(0,1.2fr)]">
-        <div className={isArabic ? "text-right" : "text-left"}>
+        <div className="text-start">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-red-400">
             {t("sellersSectionEyebrow")}
           </p>
@@ -55,20 +55,18 @@ export function ForSellers() {
           </p>
 
           <div className="mt-6 inline-flex items-center gap-3 rounded-full border border-red-500/30 bg-red-500/10 px-4 py-2 text-[0.82rem] font-medium text-red-500">
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+            <span className="h-1.5 w-1.5 rounded-full bg-red-400" />
             <span>{t("sellersBadgeCommission")}</span>
           </div>
         </div>
 
-        <div className={`relative ${isArabic ? "text-right" : "text-left"}`}>
+        <div className="relative text-start">
           <div className="pointer-events-none absolute -inset-8 rounded-[2.5rem] bg-[radial-gradient(circle_at_0%_0%,#ef4444_0,transparent_55%)] opacity-35 blur-3xl" />
           <div className="relative grid gap-4 sm:grid-cols-2">
             {items.map((item, index) => (
               <motion.div
                 key={item.title}
-                className={`flex flex-col justify-between rounded-2xl border border-[var(--border)] bg-[color:var(--surface)] p-4 shadow-[0_10px_36px_rgba(0,0,0,0.18)] ${
-                  isArabic ? "text-right" : "text-left"
-                }`}
+                className="flex flex-col justify-between rounded-2xl border border-[var(--border)] bg-[color:var(--surface)] p-4 text-start shadow-[0_10px_36px_rgba(0,0,0,0.18)]"
                 variants={cardVariants}
                 initial="hidden"
                 whileInView="visible"
@@ -87,12 +85,8 @@ export function ForSellers() {
             ))}
           </div>
 
-          <div
-            className={`mt-4 flex flex-wrap items-center gap-3 text-[0.78rem] text-[var(--muted-foreground)] ${
-              isArabic ? "flex-row-reverse" : "justify-between"
-            }`}
-          >
-            <span className={isArabic ? "text-right" : ""}>
+          <div className="mt-4 flex flex-wrap items-center justify-between gap-3 text-[0.78rem] text-[var(--muted-foreground)]">
+            <span className="text-start">
               {t("sellersFooterLine")}
             </span>
             <a href="#cta" className="btn-primary px-5 py-1.5 text-xs">

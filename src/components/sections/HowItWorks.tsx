@@ -33,7 +33,7 @@ export function HowItWorks() {
   return (
     <section id="how" className="section-shell relative scroll-mt-24 pb-16 sm:pb-20">
       <div className="flex flex-col gap-8 lg:grid lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1.2fr)] lg:items-start">
-        <div className={isArabic ? "text-right" : "text-left"}>
+        <div className="text-start">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--muted-foreground)]">
             {t("howEyebrow")}
           </p>
@@ -108,7 +108,7 @@ export function HowItWorks() {
                     key={step.key}
                     type="button"
                     onClick={() => setActiveIndex(index)}
-                    className={`w-full rounded-2xl px-3 py-2 text-left text-sm transition ${
+                    className={`w-full rounded-2xl px-3 py-2 text-start text-sm transition ${
                       isActive
                         ? "bg-red-500/15 text-red-500 ring-1 ring-red-500/45"
                         : "bg-transparent text-[var(--muted-foreground)] hover:bg-[var(--surface)] hover:text-[var(--foreground)]"
@@ -130,8 +130,8 @@ export function HowItWorks() {
           className="relative mt-2 flex-1 lg:mt-0"
         >
           <div className="relative overflow-hidden rounded-3xl border border-[var(--border)] bg-[color:var(--surface)] p-6 backdrop-blur">
-            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_0%_0%,rgba(248,113,113,0.24),transparent_55%),radial-gradient(circle_at_100%_100%,rgba(37,99,235,0.2),transparent_55%)] opacity-80" />
-            <div className="relative z-10 space-y-3 text-left">
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_0%_0%,rgba(248,113,113,0.24),transparent_55%),radial-gradient(circle_at_100%_100%,rgba(239,68,68,0.18),transparent_55%)] opacity-80" />
+            <div className="relative z-10 space-y-3 text-start">
               <p className="text-xs font-medium uppercase tracking-[0.22em] text-[var(--muted-foreground)]">
                 {mode === "buyer" ? t("howLabelBuyer") : t("howLabelSeller")}
               </p>

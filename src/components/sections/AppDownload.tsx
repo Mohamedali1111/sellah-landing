@@ -11,7 +11,7 @@ export function AppDownload() {
   return (
     <section id="download" className="section-shell relative scroll-mt-24 pb-16 sm:pb-20">
       <div className="grid gap-10 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:items-center">
-        <div className={isArabic ? "text-right" : "text-left"}>
+        <div className="text-start">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--muted-foreground)]">
             {t("downloadEyebrow")}
           </p>
@@ -30,7 +30,7 @@ export function AppDownload() {
                 <span>{t("downloadAppStore")}</span>
               </button>
               <button className="btn-secondary gap-2 px-4 py-1.5 text-xs">
-                <span className="h-2 w-2 rounded-sm bg-green-500" />
+                <span className="h-2 w-2 rounded-sm bg-red-500" />
                 <span>{t("downloadPlayStore")}</span>
               </button>
             </div>

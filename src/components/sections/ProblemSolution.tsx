@@ -28,31 +28,19 @@ export function ProblemSolution() {
         viewport={{ once: true, amount: 0.35 }}
       >
         <div className="pointer-events-none absolute inset-0 opacity-40 mix-blend-screen">
-          <div className="h-full w-full bg-[radial-gradient(circle_at_0_0,#ef4444_0,transparent_45%),radial-gradient(circle_at_100%_100%,#22d3ee_0,transparent_40%)]" />
+          <div className="h-full w-full bg-[radial-gradient(circle_at_0_0,#ef4444_0,transparent_45%),radial-gradient(circle_at_100%_100%,rgba(239,68,68,0.35)_0,transparent_40%)]" />
         </div>
 
         <div className="relative z-10 flex flex-col gap-8 lg:flex-row lg:items-stretch lg:gap-10">
           {/* Left: DM chaos */}
           <div className="flex-1 space-y-4">
-            <div
-              className={`text-xs font-semibold uppercase tracking-[0.22em] text-[var(--muted-foreground)] ${
-                isArabic ? "text-right" : "text-left"
-              }`}
-            >
+            <div className="text-start text-xs font-semibold uppercase tracking-[0.22em] text-[var(--muted-foreground)]">
               {t("problemEyebrow")}
             </div>
-            <h2
-              className={`text-balance text-2xl font-semibold text-[var(--foreground)] sm:text-[1.7rem] ${
-                isArabic ? "text-right" : "text-left"
-              }`}
-            >
+            <h2 className="text-start text-balance text-2xl font-semibold text-[var(--foreground)] sm:text-[1.7rem]">
               {t("problemTitle")}
             </h2>
-            <p
-              className={`max-w-md text-sm text-[var(--muted-foreground)] sm:text-[0.95rem] ${
-                isArabic ? "ml-auto text-right" : "text-left"
-              }`}
-            >
+            <p className="max-w-md text-start text-sm text-[var(--muted-foreground)] sm:text-[0.95rem] rtl:ms-auto">
               {t("problemDescription")}
             </p>
 
@@ -133,7 +121,7 @@ export function ProblemSolution() {
             >
               <div className="flex flex-col gap-2">
                 <div className="inline-flex items-center gap-2 text-[11px] font-medium text-[var(--foreground)]">
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-red-500" />
                   <span>{t("solutionPillSafe")}</span>
                 </div>
                 <p className="text-[11px] text-[var(--muted-foreground)]">
@@ -142,7 +130,7 @@ export function ProblemSolution() {
               </div>
               <div className="flex flex-col gap-2">
                 <div className="inline-flex items-center gap-2 text-[11px] font-medium text-[var(--foreground)]">
-                  <span className="h-1.5 w-1.5 rounded-full bg-sky-400" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-red-400" />
                   <span>{t("solutionPillClear")}</span>
                 </div>
                 <p className="text-[11px] text-[var(--muted-foreground)]">
@@ -151,7 +139,7 @@ export function ProblemSolution() {
               </div>
               <div className="flex flex-col gap-2">
                 <div className="inline-flex items-center gap-2 text-[11px] font-medium text-[var(--foreground)]">
-                  <span className="h-1.5 w-1.5 rounded-full bg-amber-400" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-red-500" />
                   <span>{t("solutionPillTrack")}</span>
                 </div>
                 <p className="text-[11px] text-[var(--muted-foreground)]">

@@ -25,22 +25,22 @@ export function ForBuyers() {
     {
       title: t("buyersStepDiscoverTitle"),
       body: t("buyersStepDiscoverBody"),
-      accent: "bg-emerald-400",
+      accent: "bg-red-500",
     },
     {
       title: t("buyersStepClarityTitle"),
       body: t("buyersStepClarityBody"),
-      accent: "bg-sky-400",
+      accent: "bg-red-400",
     },
     {
       title: t("buyersStepSecurityTitle"),
       body: t("buyersStepSecurityBody"),
-      accent: "bg-red-400",
+      accent: "bg-red-500",
     },
     {
       title: t("buyersStepTrackingTitle"),
       body: t("buyersStepTrackingBody"),
-      accent: "bg-amber-400",
+      accent: "bg-red-400",
     },
   ];
 
@@ -52,49 +52,29 @@ export function ForBuyers() {
         }`}
       >
         <div className="flex-1">
-          <p
-            className={`text-xs font-semibold uppercase tracking-[0.22em] text-[var(--muted-foreground)] ${
-              isArabic ? "text-right" : "text-left"
-            }`}
-          >
+          <p className="text-start text-xs font-semibold uppercase tracking-[0.22em] text-[var(--muted-foreground)]">
             {t("buyersSectionEyebrow")}
           </p>
-          <h2
-            className={`mt-3 text-balance text-2xl font-semibold text-[var(--foreground)] sm:text-[1.7rem] ${
-              isArabic ? "text-right" : "text-left"
-            }`}
-          >
+          <h2 className="mt-3 text-start text-balance text-2xl font-semibold text-[var(--foreground)] sm:text-[1.7rem]">
             {t("buyersSectionTitle")}
           </h2>
-          <p
-            className={`mt-3 max-w-md text-sm text-[var(--muted-foreground)] sm:text-[0.95rem] ${
-              isArabic ? "ml-auto text-right" : "text-left"
-            }`}
-          >
+          <p className="mt-3 max-w-md text-start text-sm text-[var(--muted-foreground)] sm:text-[0.95rem] rtl:ms-auto">
             {t("buyersSectionDescription")}
           </p>
-          <div
-            className={`mt-4 flex flex-wrap gap-2 text-[0.78rem] text-[var(--muted-foreground)] ${
-              isArabic ? "justify-end" : "justify-start"
-            }`}
-          >
+          <div className="mt-4 flex flex-wrap justify-start gap-2 text-[0.78rem] text-[var(--muted-foreground)]">
             <span className="chip">
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+              <span className="h-1.5 w-1.5 rounded-full bg-red-400" />
               {t("buyersMetaSafe")}
             </span>
             <span className="chip">
-              <span className="h-1.5 w-1.5 rounded-full bg-red-400" />
+              <span className="h-1.5 w-1.5 rounded-full bg-red-500" />
               {t("buyersMetaLocal")}
             </span>
           </div>
         </div>
 
         <div className="flex-1">
-          <div
-            className={`relative grid gap-4 text-sm ${
-              isArabic ? "text-right" : "text-left"
-            }`}
-          >
+          <div className="relative grid gap-4 text-start text-sm">
             {steps.map((step, index) => (
               <motion.div
                 key={step.title}

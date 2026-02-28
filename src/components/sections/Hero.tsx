@@ -15,9 +15,7 @@ export function Hero() {
 
       {/* Left: text */}
       <motion.div
-        className={`relative z-10 flex max-w-xl flex-col ${
-          isArabic ? "lg:items-end lg:text-right" : "lg:items-start lg:text-left"
-        } text-center`}
+        className="relative z-10 flex max-w-xl flex-col text-center lg:text-start lg:items-start"
         initial={{ opacity: 0, y: 28 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: [0.19, 1, 0.22, 1] }}
@@ -54,13 +52,9 @@ export function Hero() {
             {t("secondaryCta")}
           </motion.a>
         </div>
-        <div
-          className={`mt-5 flex flex-wrap items-center gap-3 text-[11px] text-[var(--muted-foreground)] ${
-            isArabic ? "justify-end" : "justify-start"
-          }`}
-        >
+        <div className="mt-5 flex flex-wrap items-center justify-start gap-3 text-[11px] text-[var(--muted-foreground)]">
           <span className="chip">
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+            <span className="h-1.5 w-1.5 rounded-full bg-red-400" />
             {t("heroSecurePill")}
           </span>
           <span>{t("heroSecureAudience")}</span>
@@ -92,7 +86,7 @@ export function Hero() {
             <div className="flex h-full flex-col justify-between p-4">
               <div className="flex items-center justify-between text-[11px] text-[var(--muted-foreground)]">
                 <span className="font-medium">Sellah</span>
-                <span className="rounded-full bg-emerald-500/15 px-2 py-0.5 text-[10px] text-emerald-500">
+                <span className="rounded-full bg-red-500/15 px-2 py-0.5 text-[10px] text-red-500">
                   {t("heroVerifiedBadge")}
                 </span>
               </div>
@@ -109,7 +103,7 @@ export function Hero() {
                 </div>
                 <div className="flex items-center justify-between pt-1 text-[10px] text-[var(--muted-foreground)]">
                   <span>{t("heroCardPaymentSecured")}</span>
-                  <span className="text-amber-500">{t("heroCardPaymentType")}</span>
+                  <span className="text-red-500">{t("heroCardPaymentType")}</span>
                 </div>
               </div>
             </div>
