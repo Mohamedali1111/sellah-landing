@@ -28,7 +28,7 @@ export function Header() {
             <span className="truncate text-sm font-semibold tracking-tight text-[var(--foreground)]">
               Sellah
             </span>
-            <span className="truncate text-[11px] font-normal text-[var(--muted-foreground)] max-[380px]:max-w-[22vw] max-[480px]:max-w-[28vw] sm:max-w-none">
+            <span className="hidden truncate text-[11px] font-normal text-[var(--muted-foreground)] sm:block sm:max-w-none">
               {t("tagline")}
             </span>
           </div>
