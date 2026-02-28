@@ -11,7 +11,7 @@ const itemVariants = {
     transition: {
       duration: 0.5,
       delay: 0.08 * index,
-      ease: [0.19, 1, 0.22, 1],
+      ease: [0.19, 1, 0.22, 1] as const,
     },
   }),
 };

@@ -10,17 +10,29 @@ import { ThemeProvider } from "@/lib/theme/ThemeProvider";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
   title: "Sellah | سِلّة",
   description:
     "Sellah is a premium marketplace app for Egypt’s local brands and small shops.",
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_VERCEL_URL
+      ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
+      : "https://sellah.app"
+  ),
+  openGraph: {
+    title: "Sellah | سِلّة",
+    description:
+      "Sellah is a premium marketplace app for Egypt's local brands and small shops.",
+  },
 };
 
 export default async function RootLayout({

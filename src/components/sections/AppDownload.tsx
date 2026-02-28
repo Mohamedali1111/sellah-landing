@@ -1,12 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 
 export function AppDownload() {
   const t = useTranslations("HomePage");
-  const locale = useLocale();
-  const isArabic = locale === "ar";
 
   return (
     <section id="download" className="section-shell relative scroll-mt-24 pb-16 sm:pb-20">

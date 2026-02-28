@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 24 },
@@ -11,15 +11,13 @@ const cardVariants = {
     transition: {
       duration: 0.55,
       delay: 0.08 * index,
-      ease: [0.19, 1, 0.22, 1],
+      ease: [0.19, 1, 0.22, 1] as const,
     },
   }),
 };
 
 export function ForSellers() {
   const t = useTranslations("HomePage");
-  const locale = useLocale();
-  const isArabic = locale === "ar";
 
   const items = [
     {

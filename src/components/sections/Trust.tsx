@@ -1,11 +1,9 @@
 "use client";
 
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 
 export function Trust() {
   const t = useTranslations("HomePage");
-  const locale = useLocale();
-  const isArabic = locale === "ar";
 
   return (
     <section className="section-shell relative pb-16 sm:pb-20">

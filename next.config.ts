@@ -2,7 +2,9 @@ import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
 
 const nextConfig: NextConfig = {
-  /* additional Next.js config options can go here */
+  poweredByHeader: false,
+  reactStrictMode: true,
+  compress: true,
 };
 
 const withNextIntl = createNextIntlPlugin();
