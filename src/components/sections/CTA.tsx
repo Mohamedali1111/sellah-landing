@@ -55,17 +55,17 @@ export function CTASection() {
             <h2 className="mt-3 text-balance text-2xl font-semibold text-[var(--foreground)] sm:text-[1.7rem]">
               {t("ctaTitle")}
             </h2>
-            <p className="mt-3 max-w-md text-sm text-[var(--muted-foreground)] sm:text-[0.95rem]">
+            <p className="mt-3 max-w-md text-sm text-[var(--muted-foreground)] sm:text-[0.95rem] rtl:ms-auto">
               {t("ctaDescription")}
             </p>
           </div>
 
           <form
             onSubmit={onSubmit}
-            className="space-y-4 rounded-2xl border border-[var(--border)] bg-[color:var(--surface)] p-5 text-start"
+            className="flex flex-col gap-3 rounded-2xl border border-[var(--border)] bg-[color:var(--surface)] p-5 text-start"
             noValidate
           >
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-1.5">
               <label
                 htmlFor="cta-email"
                 className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--muted-foreground)]"
@@ -82,22 +82,18 @@ export function CTASection() {
               />
             </div>
 
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-1.5">
               <span className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--muted-foreground)]">
                 {t("ctaRoleLabel")}
               </span>
-              <div
-                className={`inline-flex rounded-full border border-[var(--border)] bg-[var(--surface-soft)] p-0.5 text-xs font-medium ${
-                  isArabic ? "flex-row-reverse" : ""
-                }`}
-              >
+              <div className={`flex flex-wrap gap-2 ${isArabic ? "flex-row-reverse" : ""}`}>
                 <button
                   type="button"
                   onClick={() => setRole("buyer")}
-                  className={`rounded-full px-4 py-1.5 transition ${
+                  className={`rounded-xl border px-4 py-2.5 text-sm font-medium transition ${
                     role === "buyer"
-                      ? "bg-red-500 text-white"
-                      : "text-[var(--muted-foreground)] hover:text-[var(--foreground)]"
+                      ? "border-red-500 bg-red-500 text-white"
+                      : "border-[var(--border)] bg-[var(--surface-strong)] text-[var(--muted-foreground)] hover:border-red-400 hover:text-[var(--foreground)]"
                   }`}
                 >
                   {t("ctaRoleBuyer")}
@@ -105,10 +101,10 @@ export function CTASection() {
                 <button
                   type="button"
                   onClick={() => setRole("seller")}
-                  className={`rounded-full px-4 py-1.5 transition ${
+                  className={`rounded-xl border px-4 py-2.5 text-sm font-medium transition ${
                     role === "seller"
-                      ? "bg-red-500 text-white"
-                      : "text-[var(--muted-foreground)] hover:text-[var(--foreground)]"
+                      ? "border-red-500 bg-red-500 text-white"
+                      : "border-[var(--border)] bg-[var(--surface-strong)] text-[var(--muted-foreground)] hover:border-red-400 hover:text-[var(--foreground)]"
                   }`}
                 >
                   {t("ctaRoleSeller")}
@@ -127,7 +123,7 @@ export function CTASection() {
               </p>
             )}
 
-            <div className="flex flex-wrap items-center gap-3">
+            <div className="mt-1 flex flex-wrap items-center gap-3">
               <button type="submit" className="btn-primary h-11 px-6 text-sm">
                 {t("ctaPrimary")}
               </button>

@@ -90,25 +90,13 @@ export function ProblemSolution() {
 
           {/* Right: Sellah solution */}
           <div className="flex-1 space-y-4">
-            <div
-              className={`text-xs font-semibold uppercase tracking-[0.22em] text-red-400 ${
-                isArabic ? "text-right" : "text-left"
-              }`}
-            >
+            <div className="text-start text-xs font-semibold uppercase tracking-[0.22em] text-red-400">
               {t("solutionEyebrow")}
             </div>
-            <h2
-              className={`text-balance text-2xl font-semibold text-[var(--foreground)] sm:text-[1.7rem] ${
-                isArabic ? "text-right" : "text-left"
-              }`}
-            >
+            <h2 className="text-start text-balance text-2xl font-semibold text-[var(--foreground)] sm:text-[1.7rem]">
               {t("solutionTitle")}
             </h2>
-            <p
-              className={`max-w-md text-sm text-[var(--muted-foreground)] sm:text-[0.95rem] ${
-                isArabic ? "ml-auto text-right" : "text-left"
-              }`}
-            >
+            <p className="max-w-md text-start text-sm text-[var(--muted-foreground)] sm:text-[0.95rem] rtl:ms-auto">
               {t("solutionDescription")}
             </p>
 
@@ -119,36 +107,36 @@ export function ProblemSolution() {
               viewport={{ once: true, amount: 0.4 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-2 text-start">
                 <div className="inline-flex items-center gap-2 text-[11px] font-medium text-[var(--foreground)]">
-                  <span className="h-1.5 w-1.5 rounded-full bg-red-500" />
+                  <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-red-500" />
                   <span>{t("solutionPillSafe")}</span>
                 </div>
                 <p className="text-[11px] text-[var(--muted-foreground)]">
                   {t("solutionPillSafeDescription")}
                 </p>
               </div>
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-2 text-start">
                 <div className="inline-flex items-center gap-2 text-[11px] font-medium text-[var(--foreground)]">
-                  <span className="h-1.5 w-1.5 rounded-full bg-red-400" />
+                  <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-red-400" />
                   <span>{t("solutionPillClear")}</span>
                 </div>
                 <p className="text-[11px] text-[var(--muted-foreground)]">
                   {t("solutionPillClearDescription")}
                 </p>
               </div>
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-2 text-start">
                 <div className="inline-flex items-center gap-2 text-[11px] font-medium text-[var(--foreground)]">
-                  <span className="h-1.5 w-1.5 rounded-full bg-red-500" />
+                  <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-red-500" />
                   <span>{t("solutionPillTrack")}</span>
                 </div>
                 <p className="text-[11px] text-[var(--muted-foreground)]">
                   {t("solutionPillTrackDescription")}
                 </p>
               </div>
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-2 text-start">
                 <div className="inline-flex items-center gap-2 text-[11px] font-medium text-[var(--foreground)]">
-                  <span className="h-1.5 w-1.5 rounded-full bg-red-400" />
+                  <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-red-400" />
                   <span>{t("solutionPillDashboard")}</span>
                 </div>
                 <p className="text-[11px] text-[var(--muted-foreground)]">

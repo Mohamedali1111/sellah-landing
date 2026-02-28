@@ -21,7 +21,7 @@ export function Hero() {
         transition={{ duration: 0.7, ease: [0.19, 1, 0.22, 1] }}
       >
         <div className="inline-flex items-center gap-2 rounded-full border border-red-500/35 bg-red-500/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-red-400 backdrop-blur">
-          <span className="h-1.5 w-1.5 rounded-full bg-red-400" />
+          <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-red-400" />
           <span>{t("heroBadgeLabel")}</span>
         </div>
         <h1 className="mt-5 text-balance text-4xl font-semibold leading-tight tracking-tight text-[var(--foreground)] sm:text-5xl">
@@ -54,7 +54,7 @@ export function Hero() {
         </div>
         <div className="mt-5 flex flex-wrap items-center justify-start gap-3 text-[11px] text-[var(--muted-foreground)]">
           <span className="chip">
-            <span className="h-1.5 w-1.5 rounded-full bg-red-400" />
+            <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-red-400" />
             {t("heroSecurePill")}
           </span>
           <span>{t("heroSecureAudience")}</span>

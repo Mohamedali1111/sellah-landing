@@ -24,7 +24,7 @@ export function Trust() {
 
         <div className="grid gap-6 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] md:items-center">
           <div className="grid gap-4 sm:grid-cols-3">
-            <div className="rounded-2xl bg-[color:var(--surface)] p-4 ring-1 ring-red-500/35">
+            <div className="rounded-2xl bg-[color:var(--surface)] p-4 text-start ring-1 ring-red-500/35">
               <p className="text-xs font-medium uppercase tracking-[0.18em] text-red-500">
                 {t("trustMetricRating")}
               </p>
@@ -32,7 +32,7 @@ export function Trust() {
                 {t("trustMetricRatingBody")}
               </p>
             </div>
-            <div className="rounded-2xl bg-[color:var(--surface)] p-4 ring-1 ring-[var(--border)]">
+            <div className="rounded-2xl bg-[color:var(--surface)] p-4 text-start ring-1 ring-[var(--border)]">
               <p className="text-xs font-medium uppercase tracking-[0.18em] text-[var(--foreground)]">
                 {t("trustMetricVerified")}
               </p>
@@ -40,7 +40,7 @@ export function Trust() {
                 {t("trustMetricVerifiedBody")}
               </p>
             </div>
-            <div className="rounded-2xl bg-[color:var(--surface)] p-4 ring-1 ring-red-500/35">
+            <div className="rounded-2xl bg-[color:var(--surface)] p-4 text-start ring-1 ring-red-500/35">
               <p className="text-xs font-medium uppercase tracking-[0.18em] text-red-500">
                 {t("trustMetricProtection")}
               </p>
@@ -51,13 +51,13 @@ export function Trust() {
           </div>
 
           <div className="text-start">
-            <div className="flex flex-wrap gap-2 text-[0.8rem] text-[var(--muted-foreground)]">
+            <div className="flex flex-wrap justify-start gap-2 text-[0.8rem] text-[var(--muted-foreground)]">
               <span className="chip text-red-500">
-                <span className="h-1.5 w-1.5 rounded-full bg-red-400" />
+                <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-red-400" />
                 {t("trustBadgeDisputes")}
               </span>
               <span className="chip text-red-500">
-                <span className="h-1.5 w-1.5 rounded-full bg-red-400" />
+                <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-red-400" />
                 {t("trustBadgeSupport")}
               </span>
             </div>

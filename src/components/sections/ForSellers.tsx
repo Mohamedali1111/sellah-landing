@@ -50,12 +50,12 @@ export function ForSellers() {
           <h2 className="mt-3 text-balance text-2xl font-semibold text-[var(--foreground)] sm:text-[1.7rem]">
             {t("sellersSectionTitle")}
           </h2>
-          <p className="mt-3 max-w-md text-sm text-[var(--muted-foreground)] sm:text-[0.95rem]">
+          <p className="mt-3 max-w-md text-sm text-[var(--muted-foreground)] sm:text-[0.95rem] rtl:ms-auto">
             {t("sellersSectionDescription")}
           </p>
 
           <div className="mt-6 inline-flex items-center gap-3 rounded-full border border-red-500/30 bg-red-500/10 px-4 py-2 text-[0.82rem] font-medium text-red-500">
-            <span className="h-1.5 w-1.5 rounded-full bg-red-400" />
+            <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-red-400" />
             <span>{t("sellersBadgeCommission")}</span>
           </div>
         </div>

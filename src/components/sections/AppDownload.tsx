@@ -18,7 +18,7 @@ export function AppDownload() {
           <h2 className="mt-3 text-balance text-2xl font-semibold text-[var(--foreground)] sm:text-[1.7rem]">
             {t("downloadTitle")}
           </h2>
-          <p className="mt-3 max-w-md text-sm text-[var(--muted-foreground)] sm:text-[0.95rem]">
+          <p className="mt-3 max-w-md text-sm text-[var(--muted-foreground)] sm:text-[0.95rem] rtl:ms-auto">
             {t("downloadDescription")}
           </p>
 
@@ -30,7 +30,7 @@ export function AppDownload() {
                 <span>{t("downloadAppStore")}</span>
               </button>
               <button className="btn-secondary gap-2 px-4 py-1.5 text-xs">
-                <span className="h-2 w-2 rounded-sm bg-red-500" />
+                <span className="h-2 w-2 shrink-0 rounded-sm bg-red-500" />
                 <span>{t("downloadPlayStore")}</span>
               </button>
             </div>

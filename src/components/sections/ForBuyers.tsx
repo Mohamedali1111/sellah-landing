@@ -51,23 +51,23 @@ export function ForBuyers() {
           isArabic ? "lg:flex-row-reverse" : ""
         }`}
       >
-        <div className="flex-1">
-          <p className="text-start text-xs font-semibold uppercase tracking-[0.22em] text-[var(--muted-foreground)]">
+        <div className="flex-1 text-start">
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--muted-foreground)]">
             {t("buyersSectionEyebrow")}
           </p>
-          <h2 className="mt-3 text-start text-balance text-2xl font-semibold text-[var(--foreground)] sm:text-[1.7rem]">
+          <h2 className="mt-3 text-balance text-2xl font-semibold text-[var(--foreground)] sm:text-[1.7rem]">
             {t("buyersSectionTitle")}
           </h2>
-          <p className="mt-3 max-w-md text-start text-sm text-[var(--muted-foreground)] sm:text-[0.95rem] rtl:ms-auto">
+          <p className="mt-3 max-w-md text-sm text-[var(--muted-foreground)] sm:text-[0.95rem] rtl:ms-auto">
             {t("buyersSectionDescription")}
           </p>
           <div className="mt-4 flex flex-wrap justify-start gap-2 text-[0.78rem] text-[var(--muted-foreground)]">
-            <span className="chip">
-              <span className="h-1.5 w-1.5 rounded-full bg-red-400" />
+            <span className="chip inline-flex items-center gap-1.5">
+              <span className="h-1.5 w-1.5 shrink-0 self-center rounded-full bg-red-400" />
               {t("buyersMetaSafe")}
             </span>
-            <span className="chip">
-              <span className="h-1.5 w-1.5 rounded-full bg-red-500" />
+            <span className="chip inline-flex items-center gap-1.5">
+              <span className="h-1.5 w-1.5 shrink-0 self-center rounded-full bg-red-500" />
               {t("buyersMetaLocal")}
             </span>
           </div>
@@ -78,21 +78,19 @@ export function ForBuyers() {
             {steps.map((step, index) => (
               <motion.div
                 key={step.title}
-                className={`relative flex gap-4 rounded-2xl bg-[color:var(--surface)] p-4 ring-1 ring-[var(--border)] backdrop-blur ${
-                  isArabic ? "flex-row-reverse" : ""
-                }`}
+                className="relative flex items-center gap-4 rounded-2xl bg-[color:var(--surface)] p-4 ring-1 ring-[var(--border)] backdrop-blur"
                 variants={itemVariants}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
                 custom={index}
               >
-                <div className="relative mt-1">
+                <div className="shrink-0">
                   <div
                     className={`h-2.5 w-2.5 rounded-full ${step.accent} ring-2 ring-[var(--surface-strong)]`}
                   />
                 </div>
-                <div className="space-y-1">
+                <div className="min-w-0 flex-1 space-y-1 text-start">
                   <h3 className="text-[0.9rem] font-semibold text-[var(--foreground)]">
                     {step.title}
                   </h3>

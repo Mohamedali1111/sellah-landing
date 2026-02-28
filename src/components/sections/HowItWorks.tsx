@@ -40,7 +40,7 @@ export function HowItWorks() {
           <h2 className="mt-3 text-balance text-2xl font-semibold text-[var(--foreground)] sm:text-[1.7rem]">
             {t("howTitle")}
           </h2>
-          <p className="mt-3 max-w-md text-sm text-[var(--muted-foreground)] sm:text-[0.95rem]">
+          <p className="mt-3 max-w-md text-sm text-[var(--muted-foreground)] sm:text-[0.95rem] rtl:ms-auto">
             {t("howDescription")}
           </p>
 
@@ -80,7 +80,7 @@ export function HowItWorks() {
           </div>
 
           <div className="mt-6 flex">
-            <div className="relative mr-4 flex flex-col items-center">
+            <div className="relative me-4 flex flex-col items-center">
               <div className="absolute bottom-2 top-2 w-px bg-[var(--border)]" />
               {steps.map((step, index) => {
                 const isActive = index === activeIndex;
