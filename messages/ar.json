@@ -6,7 +6,12 @@
     "languageArabic": "العربية",
     "languageSwitcherLabel": "تغيير اللغة",
     "themeToggleLightLabel": "التبديل للوضع الفاتح",
-    "themeToggleDarkLabel": "التبديل للوضع الداكن"
+    "themeToggleDarkLabel": "التبديل للوضع الداكن",
+    "navBuyers": "للمشترين",
+    "navSellers": "للباعة",
+    "navHow": "إزاي بتشتغل",
+    "navDownload": "تحميل الأبلكيشن",
+    "navEarlyAccess": "وصول مبكّر"
   },
   "HomePage": {
     "heroTitle": "منصة Sellah للبراندات المحلية في مصر.",

@@ -40,7 +40,7 @@ export default async function RootLayout({
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ThemeProvider>
             <Header />
-            <div className="pt-16 sm:pt-20">{children}</div>
+            <div className="pt-16 sm:pt-[4.5rem]">{children}</div>
             <Footer />
           </ThemeProvider>
         </NextIntlClientProvider>

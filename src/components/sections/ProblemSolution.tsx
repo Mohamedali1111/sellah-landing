@@ -18,9 +18,10 @@ export function ProblemSolution() {
   const isArabic = locale === "ar";
 
   return (
-    <section className="relative mx-auto mt-10 w-full max-w-6xl px-4 pb-24 sm:px-6">
+    <section className="section-shell relative mt-4 pb-16 sm:pb-20">
       <motion.div
-        className="relative overflow-hidden rounded-3xl border border-zinc-800/40 bg-linear-to-br from-zinc-950 via-zinc-950 to-zinc-900/80 px-5 py-8 shadow-[0_24px_80px_rgba(0,0,0,0.9)] sm:px-8 sm:py-10"
+        className="relative overflow-hidden rounded-3xl border border-[var(--border)] px-5 py-8 shadow-[0_24px_80px_rgba(0,0,0,0.2)] sm:px-8 sm:py-10"
+        style={{ background: "var(--hero-gradient)" }}
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -34,21 +35,21 @@ export function ProblemSolution() {
           {/* Left: DM chaos */}
           <div className="flex-1 space-y-4">
             <div
-              className={`text-xs font-medium uppercase tracking-[0.25em] text-zinc-500 ${
+              className={`text-xs font-semibold uppercase tracking-[0.22em] text-[var(--muted-foreground)] ${
                 isArabic ? "text-right" : "text-left"
               }`}
             >
               {t("problemEyebrow")}
             </div>
             <h2
-              className={`text-balance text-2xl font-semibold text-zinc-50 sm:text-[1.7rem] ${
+              className={`text-balance text-2xl font-semibold text-[var(--foreground)] sm:text-[1.7rem] ${
                 isArabic ? "text-right" : "text-left"
               }`}
             >
               {t("problemTitle")}
             </h2>
             <p
-              className={`max-w-md text-sm text-zinc-400 sm:text-[0.95rem] ${
+              className={`max-w-md text-sm text-[var(--muted-foreground)] sm:text-[0.95rem] ${
                 isArabic ? "ml-auto text-right" : "text-left"
               }`}
             >
@@ -56,32 +57,32 @@ export function ProblemSolution() {
             </p>
 
             <motion.div
-              className="mt-4 space-y-2 rounded-2xl bg-zinc-950/70 p-3 ring-1 ring-zinc-800/80 sm:p-4"
+              className="mt-4 space-y-2 rounded-2xl bg-[color:var(--surface)] p-3 ring-1 ring-[var(--border)] sm:p-4"
               initial={{ opacity: 0, x: isArabic ? 40 : -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.4 }}
               transition={{ duration: 0.6, delay: 0.05 }}
             >
-              <div className="mb-1 flex items-center justify-between text-[11px] text-zinc-500">
+              <div className="mb-1 flex items-center justify-between text-[11px] text-[var(--muted-foreground)]">
                 <span>{t("problemDmHeaderLeft")}</span>
                 <span>{t("problemDmHeaderRight")}</span>
               </div>
               <div className="space-y-2 text-[11px]">
                 <div className="flex gap-2">
-                  <div className="mt-1 h-6 w-6 shrink-0 rounded-full bg-zinc-700/80" />
-                  <div className="flex-1 rounded-2xl bg-zinc-900/90 px-3 py-2 text-zinc-200">
+                  <div className="mt-1 h-6 w-6 shrink-0 rounded-full bg-[var(--surface-soft)]" />
+                  <div className="flex-1 rounded-2xl bg-[var(--surface-soft)] px-3 py-2 text-[var(--foreground)]">
                     {t("problemDmMessage1")}
                   </div>
                 </div>
                 <div className="flex gap-2">
-                  <div className="mt-1 h-6 w-6 shrink-0 rounded-full bg-zinc-800/80" />
-                  <div className="flex-1 rounded-2xl bg-zinc-900/70 px-3 py-2 text-zinc-300">
+                  <div className="mt-1 h-6 w-6 shrink-0 rounded-full bg-[var(--surface-soft)]/90" />
+                  <div className="flex-1 rounded-2xl bg-[var(--surface-soft)]/85 px-3 py-2 text-[var(--foreground)]">
                     {t("problemDmMessage2")}
                   </div>
                 </div>
                 <div className="flex gap-2">
-                  <div className="mt-1 h-6 w-6 shrink-0 rounded-full bg-zinc-800/60" />
-                  <div className="flex-1 rounded-2xl bg-zinc-900/60 px-3 py-2 text-zinc-400">
+                  <div className="mt-1 h-6 w-6 shrink-0 rounded-full bg-[var(--surface-soft)]/70" />
+                  <div className="flex-1 rounded-2xl bg-[var(--surface-soft)]/75 px-3 py-2 text-[var(--muted-foreground)]">
                     {t("problemDmMessage3")}
                   </div>
                 </div>
@@ -93,30 +94,30 @@ export function ProblemSolution() {
           </div>
 
           {/* Divider label for larger screens */}
-          <div className="my-4 hidden flex-col items-center justify-center text-[11px] font-medium uppercase tracking-[0.3em] text-zinc-500 lg:flex">
-            <span className="mb-2 h-8 w-px bg-zinc-700/80" />
+          <div className="my-4 hidden flex-col items-center justify-center text-[11px] font-medium uppercase tracking-[0.3em] text-[var(--muted-foreground)] lg:flex">
+            <span className="mb-2 h-8 w-px bg-[var(--border)]" />
             <span>{t("problemVsLabel")}</span>
-            <span className="mt-2 h-8 w-px bg-zinc-700/80" />
+            <span className="mt-2 h-8 w-px bg-[var(--border)]" />
           </div>
 
           {/* Right: Sellah solution */}
           <div className="flex-1 space-y-4">
             <div
-              className={`text-xs font-medium uppercase tracking-[0.25em] text-red-300 ${
+              className={`text-xs font-semibold uppercase tracking-[0.22em] text-red-400 ${
                 isArabic ? "text-right" : "text-left"
               }`}
             >
               {t("solutionEyebrow")}
             </div>
             <h2
-              className={`text-balance text-2xl font-semibold text-zinc-50 sm:text-[1.7rem] ${
+              className={`text-balance text-2xl font-semibold text-[var(--foreground)] sm:text-[1.7rem] ${
                 isArabic ? "text-right" : "text-left"
               }`}
             >
               {t("solutionTitle")}
             </h2>
             <p
-              className={`max-w-md text-sm text-zinc-300 sm:text-[0.95rem] ${
+              className={`max-w-md text-sm text-[var(--muted-foreground)] sm:text-[0.95rem] ${
                 isArabic ? "ml-auto text-right" : "text-left"
               }`}
             >
@@ -124,45 +125,45 @@ export function ProblemSolution() {
             </p>
 
             <motion.div
-              className="mt-4 grid gap-3 rounded-2xl bg-zinc-50/5 p-3 ring-1 ring-red-500/40 backdrop-blur sm:grid-cols-2 sm:p-4"
+              className="mt-4 grid gap-3 rounded-2xl bg-[color:var(--surface)] p-3 ring-1 ring-red-500/35 backdrop-blur sm:grid-cols-2 sm:p-4"
               initial={{ opacity: 0, x: isArabic ? -40 : 40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.4 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
               <div className="flex flex-col gap-2">
-                <div className="inline-flex items-center gap-2 text-[11px] font-medium text-zinc-100">
+                <div className="inline-flex items-center gap-2 text-[11px] font-medium text-[var(--foreground)]">
                   <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
                   <span>{t("solutionPillSafe")}</span>
                 </div>
-                <p className="text-[11px] text-zinc-400">
+                <p className="text-[11px] text-[var(--muted-foreground)]">
                   {t("solutionPillSafeDescription")}
                 </p>
               </div>
               <div className="flex flex-col gap-2">
-                <div className="inline-flex items-center gap-2 text-[11px] font-medium text-zinc-100">
+                <div className="inline-flex items-center gap-2 text-[11px] font-medium text-[var(--foreground)]">
                   <span className="h-1.5 w-1.5 rounded-full bg-sky-400" />
                   <span>{t("solutionPillClear")}</span>
                 </div>
-                <p className="text-[11px] text-zinc-400">
+                <p className="text-[11px] text-[var(--muted-foreground)]">
                   {t("solutionPillClearDescription")}
                 </p>
               </div>
               <div className="flex flex-col gap-2">
-                <div className="inline-flex items-center gap-2 text-[11px] font-medium text-zinc-100">
+                <div className="inline-flex items-center gap-2 text-[11px] font-medium text-[var(--foreground)]">
                   <span className="h-1.5 w-1.5 rounded-full bg-amber-400" />
                   <span>{t("solutionPillTrack")}</span>
                 </div>
-                <p className="text-[11px] text-zinc-400">
+                <p className="text-[11px] text-[var(--muted-foreground)]">
                   {t("solutionPillTrackDescription")}
                 </p>
               </div>
               <div className="flex flex-col gap-2">
-                <div className="inline-flex items-center gap-2 text-[11px] font-medium text-zinc-100">
+                <div className="inline-flex items-center gap-2 text-[11px] font-medium text-[var(--foreground)]">
                   <span className="h-1.5 w-1.5 rounded-full bg-red-400" />
                   <span>{t("solutionPillDashboard")}</span>
                 </div>
-                <p className="text-[11px] text-zinc-400">
+                <p className="text-[11px] text-[var(--muted-foreground)]">
                   {t("solutionPillDashboardDescription")}
                 </p>
               </div>
@@ -173,4 +174,3 @@ export function ProblemSolution() {
     </section>
   );
 }
-

@@ -45,7 +45,7 @@ export function ForBuyers() {
   ];
 
   return (
-    <section className="relative mx-auto w-full max-w-6xl px-4 pb-20 sm:px-6">
+    <section id="buyers" className="section-shell relative scroll-mt-24 pb-16 sm:pb-20">
       <div
         className={`flex flex-col gap-10 lg:flex-row ${
           isArabic ? "lg:flex-row-reverse" : ""
@@ -53,36 +53,36 @@ export function ForBuyers() {
       >
         <div className="flex-1">
           <p
-            className={`text-xs font-semibold uppercase tracking-[0.25em] text-zinc-500 ${
+            className={`text-xs font-semibold uppercase tracking-[0.22em] text-[var(--muted-foreground)] ${
               isArabic ? "text-right" : "text-left"
             }`}
           >
             {t("buyersSectionEyebrow")}
           </p>
           <h2
-            className={`mt-3 text-balance text-2xl font-semibold text-zinc-50 sm:text-[1.7rem] ${
+            className={`mt-3 text-balance text-2xl font-semibold text-[var(--foreground)] sm:text-[1.7rem] ${
               isArabic ? "text-right" : "text-left"
             }`}
           >
             {t("buyersSectionTitle")}
           </h2>
           <p
-            className={`mt-3 max-w-md text-sm text-zinc-400 sm:text-[0.95rem] ${
+            className={`mt-3 max-w-md text-sm text-[var(--muted-foreground)] sm:text-[0.95rem] ${
               isArabic ? "ml-auto text-right" : "text-left"
             }`}
           >
             {t("buyersSectionDescription")}
           </p>
           <div
-            className={`mt-4 flex flex-wrap gap-2 text-[0.78rem] text-zinc-500 ${
+            className={`mt-4 flex flex-wrap gap-2 text-[0.78rem] text-[var(--muted-foreground)] ${
               isArabic ? "justify-end" : "justify-start"
             }`}
           >
-            <span className="inline-flex items-center gap-1 rounded-full bg-zinc-900/80 px-3 py-1 text-zinc-300 ring-1 ring-zinc-800">
+            <span className="chip">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
               {t("buyersMetaSafe")}
             </span>
-            <span className="inline-flex items-center gap-1 rounded-full bg-zinc-900/60 px-3 py-1 text-zinc-300 ring-1 ring-zinc-800/80">
+            <span className="chip">
               <span className="h-1.5 w-1.5 rounded-full bg-red-400" />
               {t("buyersMetaLocal")}
             </span>
@@ -98,7 +98,7 @@ export function ForBuyers() {
             {steps.map((step, index) => (
               <motion.div
                 key={step.title}
-                className={`relative flex gap-4 rounded-2xl bg-zinc-900/70 p-4 ring-1 ring-zinc-800/60 backdrop-blur ${
+                className={`relative flex gap-4 rounded-2xl bg-[color:var(--surface)] p-4 ring-1 ring-[var(--border)] backdrop-blur ${
                   isArabic ? "flex-row-reverse" : ""
                 }`}
                 variants={itemVariants}
@@ -109,14 +109,14 @@ export function ForBuyers() {
               >
                 <div className="relative mt-1">
                   <div
-                    className={`h-2.5 w-2.5 rounded-full ${step.accent} ring-2 ring-zinc-950`}
+                    className={`h-2.5 w-2.5 rounded-full ${step.accent} ring-2 ring-[var(--surface-strong)]`}
                   />
                 </div>
                 <div className="space-y-1">
-                  <h3 className="text-[0.9rem] font-semibold text-zinc-50">
+                  <h3 className="text-[0.9rem] font-semibold text-[var(--foreground)]">
                     {step.title}
                   </h3>
-                  <p className="text-[0.8rem] leading-relaxed text-zinc-400">
+                  <p className="text-[0.8rem] leading-relaxed text-[var(--muted-foreground)]">
                     {step.body}
                   </p>
                 </div>
@@ -128,4 +128,3 @@ export function ForBuyers() {
     </section>
   );
 }
-

@@ -14,71 +14,38 @@ export function HowItWorks() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const stepsBuyer = [
-    {
-      key: "1",
-      title: t("howBuyerStep1Title"),
-      body: t("howBuyerStep1Body"),
-    },
-    {
-      key: "2",
-      title: t("howBuyerStep2Title"),
-      body: t("howBuyerStep2Body"),
-    },
-    {
-      key: "3",
-      title: t("howBuyerStep3Title"),
-      body: t("howBuyerStep3Body"),
-    },
-    {
-      key: "4",
-      title: t("howBuyerStep4Title"),
-      body: t("howBuyerStep4Body"),
-    },
+    { key: "1", title: t("howBuyerStep1Title"), body: t("howBuyerStep1Body") },
+    { key: "2", title: t("howBuyerStep2Title"), body: t("howBuyerStep2Body") },
+    { key: "3", title: t("howBuyerStep3Title"), body: t("howBuyerStep3Body") },
+    { key: "4", title: t("howBuyerStep4Title"), body: t("howBuyerStep4Body") },
   ];
 
   const stepsSeller = [
-    {
-      key: "1",
-      title: t("howSellerStep1Title"),
-      body: t("howSellerStep1Body"),
-    },
-    {
-      key: "2",
-      title: t("howSellerStep2Title"),
-      body: t("howSellerStep2Body"),
-    },
-    {
-      key: "3",
-      title: t("howSellerStep3Title"),
-      body: t("howSellerStep3Body"),
-    },
-    {
-      key: "4",
-      title: t("howSellerStep4Title"),
-      body: t("howSellerStep4Body"),
-    },
+    { key: "1", title: t("howSellerStep1Title"), body: t("howSellerStep1Body") },
+    { key: "2", title: t("howSellerStep2Title"), body: t("howSellerStep2Body") },
+    { key: "3", title: t("howSellerStep3Title"), body: t("howSellerStep3Body") },
+    { key: "4", title: t("howSellerStep4Title"), body: t("howSellerStep4Body") },
   ];
 
   const steps = mode === "buyer" ? stepsBuyer : stepsSeller;
   const activeStep = steps[activeIndex] ?? steps[0];
 
   return (
-    <section className="relative mx-auto w-full max-w-6xl px-4 pb-24 sm:px-6">
+    <section id="how" className="section-shell relative scroll-mt-24 pb-16 sm:pb-20">
       <div className="flex flex-col gap-8 lg:grid lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1.2fr)] lg:items-start">
-        {/* Left: title + toggle + vertical timeline */}
         <div className={isArabic ? "text-right" : "text-left"}>
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-zinc-500">
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--muted-foreground)]">
             {t("howEyebrow")}
           </p>
-          <h2 className="mt-3 text-balance text-2xl font-semibold text-zinc-50 sm:text-[1.7rem]">
+          <h2 className="mt-3 text-balance text-2xl font-semibold text-[var(--foreground)] sm:text-[1.7rem]">
             {t("howTitle")}
           </h2>
-          <p className="mt-3 max-w-md text-sm text-zinc-300 sm:text-[0.95rem]">
+          <p className="mt-3 max-w-md text-sm text-[var(--muted-foreground)] sm:text-[0.95rem]">
             {t("howDescription")}
           </p>
 
           <div
-            className={`mt-5 inline-flex rounded-full border border-zinc-700/70 bg-black/40 p-0.5 text-xs font-medium text-zinc-300 backdrop-blur ${
+            className={`mt-5 inline-flex rounded-full border border-[var(--border)] bg-[var(--surface-soft)] p-0.5 text-xs font-medium ${
               isArabic ? "flex-row-reverse" : ""
             }`}
           >
@@ -90,8 +57,8 @@ export function HowItWorks() {
               }}
               className={`rounded-full px-4 py-1.5 transition ${
                 mode === "buyer"
-                  ? "bg-zinc-50 text-zinc-900"
-                  : "text-zinc-300 hover:text-white"
+                  ? "bg-[var(--surface)] text-[var(--foreground)]"
+                  : "text-[var(--muted-foreground)] hover:text-[var(--foreground)]"
               }`}
             >
               {t("howToggleBuyer")}
@@ -104,8 +71,8 @@ export function HowItWorks() {
               }}
               className={`rounded-full px-4 py-1.5 transition ${
                 mode === "seller"
-                  ? "bg-zinc-50 text-zinc-900"
-                  : "text-zinc-300 hover:text-white"
+                  ? "bg-[var(--surface)] text-[var(--foreground)]"
+                  : "text-[var(--muted-foreground)] hover:text-[var(--foreground)]"
               }`}
             >
               {t("howToggleSeller")}
@@ -114,7 +81,7 @@ export function HowItWorks() {
 
           <div className="mt-6 flex">
             <div className="relative mr-4 flex flex-col items-center">
-              <div className="absolute top-2 bottom-2 w-px bg-zinc-800" />
+              <div className="absolute bottom-2 top-2 w-px bg-[var(--border)]" />
               {steps.map((step, index) => {
                 const isActive = index === activeIndex;
                 return (
@@ -124,8 +91,8 @@ export function HowItWorks() {
                     onClick={() => setActiveIndex(index)}
                     className={`relative z-10 mb-4 flex h-7 w-7 items-center justify-center rounded-full border text-xs transition ${
                       isActive
-                        ? "border-red-400 bg-red-500 text-white"
-                        : "border-zinc-700 bg-zinc-950 text-zinc-400 hover:border-red-400/70 hover:text-red-300"
+                        ? "border-red-500 bg-red-500 text-white"
+                        : "border-[var(--border)] bg-[var(--surface)] text-[var(--muted-foreground)] hover:border-red-400/70 hover:text-red-500"
                     }`}
                   >
                     {step.key}
@@ -133,7 +100,7 @@ export function HowItWorks() {
                 );
               })}
             </div>
-            <div className="space-y-3">
+            <div className="w-full space-y-3">
               {steps.map((step, index) => {
                 const isActive = index === activeIndex;
                 return (
@@ -143,8 +110,8 @@ export function HowItWorks() {
                     onClick={() => setActiveIndex(index)}
                     className={`w-full rounded-2xl px-3 py-2 text-left text-sm transition ${
                       isActive
-                        ? "bg-red-500/15 text-red-100 ring-1 ring-red-500/60"
-                        : "bg-transparent text-zinc-400 hover:bg-zinc-900/60"
+                        ? "bg-red-500/15 text-red-500 ring-1 ring-red-500/45"
+                        : "bg-transparent text-[var(--muted-foreground)] hover:bg-[var(--surface)] hover:text-[var(--foreground)]"
                     }`}
                   >
                     {step.title}
@@ -155,7 +122,6 @@ export function HowItWorks() {
           </div>
         </div>
 
-        {/* Right: animated detail panel */}
         <motion.div
           key={`${mode}-${activeStep.key}`}
           initial={{ opacity: 0, y: 20, scale: 0.97 }}
@@ -163,16 +129,16 @@ export function HowItWorks() {
           transition={{ duration: 0.5, ease: [0.19, 1, 0.22, 1] }}
           className="relative mt-2 flex-1 lg:mt-0"
         >
-          <div className="relative overflow-hidden rounded-3xl bg-black/60 p-6 ring-1 ring-zinc-800/80 backdrop-blur">
-            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_0%_0%,rgba(248,113,113,0.28),transparent_55%),radial-gradient(circle_at_100%_100%,rgba(59,130,246,0.24),transparent_55%)] opacity-80" />
+          <div className="relative overflow-hidden rounded-3xl border border-[var(--border)] bg-[color:var(--surface)] p-6 backdrop-blur">
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_0%_0%,rgba(248,113,113,0.24),transparent_55%),radial-gradient(circle_at_100%_100%,rgba(37,99,235,0.2),transparent_55%)] opacity-80" />
             <div className="relative z-10 space-y-3 text-left">
-              <p className="text-xs font-medium uppercase tracking-[0.25em] text-zinc-300">
+              <p className="text-xs font-medium uppercase tracking-[0.22em] text-[var(--muted-foreground)]">
                 {mode === "buyer" ? t("howLabelBuyer") : t("howLabelSeller")}
               </p>
-              <h3 className="text-lg font-semibold text-zinc-50">
+              <h3 className="text-lg font-semibold text-[var(--foreground)]">
                 {activeStep.title}
               </h3>
-              <p className="text-sm leading-relaxed text-zinc-200">
+              <p className="text-sm leading-relaxed text-[var(--muted-foreground)]">
                 {activeStep.body}
               </p>
             </div>
@@ -182,4 +148,3 @@ export function HowItWorks() {
     </section>
   );
 }
-

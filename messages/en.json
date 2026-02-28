@@ -6,7 +6,12 @@
     "languageArabic": "العربية",
     "languageSwitcherLabel": "Language switcher",
     "themeToggleLightLabel": "Switch to light mode",
-    "themeToggleDarkLabel": "Switch to dark mode"
+    "themeToggleDarkLabel": "Switch to dark mode",
+    "navBuyers": "For buyers",
+    "navSellers": "For sellers",
+    "navHow": "How it works",
+    "navDownload": "Get the app",
+    "navEarlyAccess": "Early access"
   },
   "HomePage": {
     "heroTitle": "The marketplace for Egypt’s local brands.",

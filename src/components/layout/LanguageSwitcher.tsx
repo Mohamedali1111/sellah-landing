@@ -4,8 +4,7 @@ import { useTransition } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 
-const SUPPORTED_LOCALES = ["en", "ar"] as const;
-type Locale = (typeof SUPPORTED_LOCALES)[number];
+type Locale = "en" | "ar";
 
 export function LanguageSwitcher() {
   const locale = useLocale() as Locale;
@@ -24,7 +23,7 @@ export function LanguageSwitcher() {
 
   return (
     <div
-      className="inline-flex items-center gap-px rounded-full border border-zinc-800/10 bg-zinc-100/60 p-0.5 text-xs font-medium text-zinc-700 shadow-sm dark:border-zinc-700/60 dark:bg-zinc-900/60 dark:text-zinc-200"
+      className="inline-flex items-center gap-px rounded-full border border-[var(--border)] bg-[var(--surface-soft)] p-0.5 text-xs font-semibold text-[var(--foreground)] shadow-sm"
       aria-label={t("languageSwitcherLabel")}
     >
       <button
@@ -34,8 +33,8 @@ export function LanguageSwitcher() {
         aria-pressed={locale === "en"}
         className={`rounded-full px-3 py-1 transition ${
           locale === "en"
-            ? "bg-white text-zinc-900 shadow-sm dark:bg-zinc-100 dark:text-zinc-900"
-            : "text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+            ? "bg-[var(--surface)] text-[var(--foreground)] shadow-sm"
+            : "text-[var(--muted-foreground)] hover:text-[var(--foreground)]"
         }`}
       >
         {t("languageEnglish")}
@@ -47,8 +46,8 @@ export function LanguageSwitcher() {
         aria-pressed={locale === "ar"}
         className={`rounded-full px-3 py-1 transition ${
           locale === "ar"
-            ? "bg-white text-zinc-900 shadow-sm dark:bg-zinc-100 dark:text-zinc-900"
-            : "text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+            ? "bg-[var(--surface)] text-[var(--foreground)] shadow-sm"
+            : "text-[var(--muted-foreground)] hover:text-[var(--foreground)]"
         }`}
       >
         {t("languageArabic")}
@@ -56,4 +55,3 @@ export function LanguageSwitcher() {
     </div>
   );
 }
-
