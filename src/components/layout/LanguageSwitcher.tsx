@@ -23,7 +23,7 @@ export function LanguageSwitcher() {
 
   return (
     <div
-      className="inline-flex min-h-[44px] items-center gap-px rounded-full border border-[var(--border)] bg-[var(--surface-soft)] p-0.5 text-xs font-semibold text-[var(--foreground)] shadow-sm md:min-h-0"
+      className="inline-flex shrink-0 min-h-[44px] items-center gap-px rounded-full border border-[var(--border)] bg-[var(--surface-soft)] p-0.5 text-xs font-semibold text-[var(--foreground)] shadow-sm md:min-h-0"
       aria-label={t("languageSwitcherLabel")}
     >
       <button
@@ -31,7 +31,7 @@ export function LanguageSwitcher() {
         onClick={() => setLocale("en")}
         disabled={isPending}
         aria-pressed={locale === "en"}
-        className={`rounded-full px-3 py-2 transition touch-manipulation md:py-1 ${
+        className={`shrink-0 rounded-full px-2.5 py-2 transition touch-manipulation sm:px-3 md:py-1 ${
           locale === "en"
             ? "bg-[var(--surface)] text-[var(--foreground)] shadow-sm"
             : "text-[var(--muted-foreground)] hover:text-[var(--foreground)]"
@@ -44,7 +44,7 @@ export function LanguageSwitcher() {
         onClick={() => setLocale("ar")}
         disabled={isPending}
         aria-pressed={locale === "ar"}
-        className={`rounded-full px-3 py-2 transition touch-manipulation md:py-1 ${
+        className={`shrink-0 rounded-full px-2.5 py-2 transition touch-manipulation sm:px-3 md:py-1 ${
           locale === "ar"
             ? "bg-[var(--surface)] text-[var(--foreground)] shadow-sm"
             : "text-[var(--muted-foreground)] hover:text-[var(--foreground)]"

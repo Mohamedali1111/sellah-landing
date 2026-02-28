@@ -12,23 +12,23 @@ export function Header() {
 
   return (
     <header
-      className="fixed inset-x-0 top-0 z-40 border-b border-[var(--border)] bg-[color:var(--surface)]/95 backdrop-blur-xl"
+      className="fixed inset-x-0 top-0 z-40 overflow-x-hidden border-b border-[var(--border)] bg-[color:var(--surface)]/95 backdrop-blur-xl"
       style={{ paddingTop: "max(env(safe-area-inset-top, 0px), 0px)" }}
     >
-      <div className="header-content mx-auto flex min-w-0 max-w-6xl items-center justify-between gap-3 py-3 sm:py-3.5">
+      <div className="header-content mx-auto flex min-w-0 max-w-6xl items-center justify-between gap-2 py-3 sm:gap-3 sm:py-3.5">
         <Link
           href="/"
-          className="inline-flex min-w-0 shrink-0 items-center gap-2 sm:gap-2.5"
+          className="flex min-w-0 shrink items-center gap-2 overflow-hidden sm:gap-2.5"
           aria-label={t("appName")}
         >
           <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[linear-gradient(135deg,#dc2626_0%,#7f1d1d_100%)] text-xs font-semibold text-white shadow-lg shadow-red-600/40 sm:h-8 sm:w-8">
             S
           </div>
-          <div className="flex min-w-0 flex-col items-start justify-center">
+          <div className="flex min-w-0 flex-1 flex-col items-start justify-center overflow-hidden">
             <span className="truncate text-sm font-semibold tracking-tight text-[var(--foreground)]">
               Sellah
             </span>
-            <span className="line-clamp-1 max-w-[36vw] truncate text-[11px] font-normal text-[var(--muted-foreground)] sm:max-w-none">
+            <span className="truncate text-[11px] font-normal text-[var(--muted-foreground)] max-[380px]:max-w-[22vw] max-[480px]:max-w-[28vw] sm:max-w-none">
               {t("tagline")}
             </span>
           </div>
@@ -58,8 +58,8 @@ export function Header() {
           <LanguageSwitcher />
         </div>
 
-        {/* Mobile controls: same horizontal padding, touch-friendly */}
-        <div className="flex shrink-0 items-center gap-1 sm:gap-2 md:hidden">
+        {/* Mobile controls: never shrink, always visible and aligned to end */}
+        <div className="flex shrink-0 items-center justify-end gap-1.5 sm:gap-2 md:hidden">
           <ThemeToggle />
           <LanguageSwitcher />
           <button
@@ -67,7 +67,7 @@ export function Header() {
             onClick={() => setOpen((v) => !v)}
             aria-label="Toggle navigation"
             aria-expanded={open}
-            className="inline-flex h-11 w-11 min-h-[44px] min-w-[44px] items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface-soft)] text-[var(--foreground)] touch-manipulation"
+            className="inline-flex h-11 w-11 min-h-[44px] min-w-[44px] shrink-0 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface-soft)] text-[var(--foreground)] touch-manipulation"
           >
             <span className="relative block h-3 w-4">
               <span
