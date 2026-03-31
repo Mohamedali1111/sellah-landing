@@ -7,6 +7,7 @@ import { ThemeToggle } from "./ThemeToggle";
 
 export function Footer() {
   const t = useTranslations("Common");
+  const legal = useTranslations("LegalPages");
 
   return (
     <footer className="mt-16 border-t border-[var(--border)] bg-[color:var(--surface)]/85 backdrop-blur">
@@ -26,18 +27,24 @@ export function Footer() {
               hello@sellah.app
             </Link>
           </div>
-          <div className="flex flex-wrap gap-2.5">
+          <div className="flex flex-wrap gap-x-4 gap-y-2">
             <Link
-              href="#"
+              href="/privacy"
               className="text-[var(--muted-foreground)] hover:text-[var(--foreground)]"
             >
-              Privacy
+              {legal("navPrivacy")}
             </Link>
             <Link
-              href="#"
+              href="/terms"
               className="text-[var(--muted-foreground)] hover:text-[var(--foreground)]"
             >
-              Terms
+              {legal("navTerms")}
+            </Link>
+            <Link
+              href="/support"
+              className="text-[var(--muted-foreground)] hover:text-[var(--foreground)]"
+            >
+              {legal("navSupport")}
             </Link>
           </div>
         </div>
