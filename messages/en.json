@@ -129,6 +129,8 @@
     "ctaErrorInvalidEmail": "Please enter a valid email address.",
     "ctaErrorRole": "Please choose whether you are a buyer or a seller.",
     "ctaSuccessMessage": "Thanks – you’re on the list. We’ll email you as soon as Sellah opens up.",
+    "ctaFootnote": "We’ll only use your email for Sellah updates and early access. You can unsubscribe anytime.",
+    "ctaRoleHint": "Choose one so we send the right invite.",
     "downloadEyebrow": "Get the app",
     "downloadTitle": "Scan once. Shop local on repeat.",
     "downloadDescription": "Use your camera to open Sellah when it’s live, or save the QR in your photos and come back when you’re ready to buy or sell.",
